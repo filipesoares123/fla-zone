@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta name="theme-color" content="blue" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    
+    <title>Fla-Zone</title>
+    
+    <!-- iclusao de arquivos necessarios JavaScript e CSS -->
+    <!-- highlight js -->
+    <script src="/Fla-Zone/res/highlight/highlight.js"></script>
+    <!-- jQuery js -->
+    <script src="/Fla-Zone/res/jquery/jquery.js"></script>
+    <!-- bootstrap js -->
+    <script src="/Fla-Zone/res/bootstrap-5.3.8/js/bootstrap.js"></script>
+    <!-- scripts -->
+    <script src="/Fla-Zone/scripts/index.js"></script>
+    
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="/Fla-Zone/res/bootstrap-5.3.8/css/bootstrap.css">
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="/Fla-Zone/res/icons/bootstrap-icons.css">
+    <!-- tema highlight -->
+    <link rel="stylesheet" href="/Fla-Zone/res/highlight/styles/googlecode.css"> <!-- cybertopia-, color-brewer, an-old-hope,  ally-dark, xt256, arta, agate, docco-->
+    <!-- style css -->
+    <link rel="stylesheet" href="/Fla-Zone/styles/style.css">
+    
+</head>
+
+<body data-bs-theme="light">
+    
+    <div class="bg-gradient alert alert-primary fixed-bottom top-0 bottomm-0 end-0 start-0 fade show small p-0 rounded-0">
+        <div class="w-100 bg-info-subtle d-flex align-tems-center p-1 justify-content-between rounded-0">
+            <span class="ps-2 bi bi-info-circle-fill">
+                <span style="font-family: 'note', serif;">Nota</span>
+                <br>
+                <span class="text-warning text-nowrap" style="font-family: 'escrita', cursive; letter-spacing: 2px;">(desaparece em menos de 25 segundos)</span>
+            </span>
+            <span class="bi bi-x-lg fs-2 text-danger position-absolute top-0 end-0 me-3 mt-2" data-bs-dismiss="alert" aria-label="Fechar"></span>
+        </div>
+        <div class="p-3 p-md-5 h-100">
+            <p>
+                Clique no botão fixo com <span class="bi bi-arrow-clockwise"></span> se pelo menos uma destas opções
+                ocorrer. Caso nāo funcionar, repita de novo.
+            </p>
+            <ul>
+                <li>O tema da página nāo ficar escuro</li>
+                <li>Esta mensagem nāo desaparecer em menos de 25 segundos</li>
+                <li>O menu lateral ficar sem sombra (isto é, se estiver usando um computador)</li>
+                <li>O ícone do sol e o da lua estiverem lado a lado</li>
+                <li>A opção "inicio" nāo estiver destacada</li>
+                <li>As opções do menu nāo estão em maiúsculas</li>
+                <li>Apenas o logotipo fique em azul enquanto o resto do cabeçalho nāo</li>
+                <li>O botão do menu nāo poder mostrar o menu lateral (isto é, se estiver usando um smartphone)</li>
+                <li>O icone do sol ou da lua nāo puder mudar o tema da página</li>
+                <li>Os exemplos de códigos nāo estarem estilizados </li>
+            </ul>
+        </div>
+    </div>
+    <div class="rounded-circle fixo my-shadow position-fixed" style="z-index: 9999; right: 10%; bottom: 7%;">
+        <a href="javascript: document.getElementsByClassName('container-fluid')[0].style.display = 'none';
+        setTimeout(() => location.reload(), 400)" class="fs-1 bi bi-arrow-clockwise text-primary"></a>
+    </div>
+    
+    <header class="d-flex flex-column text-white sticky-top my-shadow">
+        <div class="azul fs-1 px-3 navbar flex-nowrap d-flex align-tems-center justify-content-between shadow">
+            <a class="navbar-brand d-flex align-tems-center gap-2" href="#">
+                <img class="w-25 rounded border p-1 shadow" src="/Fla-Zone/images/fla-zone.png" alt="Fla-Zone - logotipo" />
+                <span class="d-md-block d-none fs-1 text-white">Fla-Zone</span>
+            </a>
+            <span class="d-flex gap-2 aligns-items-center justify-content-between">
+                <span id="toggle" class="d-flex gap-3 fs-1 aligns-items-center shadow">
+                    <span class="text-warning bi bi-sun-fill"></span>
+                    <span class="text-warning bi bi-moon-fill"></span>
+                    <span class="d-none d-md-inline fs-1" id="msg">Escuro</span>
+                </span>
+                <span class="d-md-none d-inline text-white bi bi-list" data-bs-toggle="offcanvas" data-bs-target=".menu" aria-expanded="false"></span>
+            </span>
+        </div>
+        <nav class="px-4 text-bg-light">
+            <ol class="m-0 py-1 h-100 fs-6 breadcrumb breadcrumb-chevron d-flex flex-nowrap text-nowrap overflow-x-auto">
+                <li class="breadcrumb-item">
+                    <span class="bi bi-house-door-fill"></span>
+                    <a href="#" class="activo">Inicio</a>
+                </li>
+                <li class="breadcrumb-item"></li>
+            </ol>
+        </nav>
+    </header>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div data-bs-theme="light" class="sidebar sombra-direita-desktop col-md-4">
+                <div class="menu offcanvas-md offcanvas-end navegacao">
+                    <div class="offcanvas-header bg-gradiente">
+                        <div class="offcanvas-title">
+                            <h1><a href="." class="text-decoration-none">Fla-Zone</a></h1>
+                            <span class="text-muted">Menu de conteúdos para programação Web e Java</span>
+                        </div>
+                        <span class="text-danger bi bi-x-lg fs-1 position-absolute top-0 end-0 me-2 mt-2" data-bs-dismiss="offcanvas" data-bs-target=".menu" aria-label="Fechar"></span>
+                    </div>
+                    <div class="offcanvas-body overflow-x-auto">
+                        <ul class="nav d-flex flex-column">
+                            <li class="nav-item mt-md-4"><a href="#" class="nav-link activo"><span class="bi fs-3 bi-house-door-fill me-4"></span>Inicio</a></li>
+                            <li>
+                                <span class="nav-link" data-bs-toggle="collapse" data-bs-target=".js">
+                                    <span class="bi bi-chevron-right"></span>
+                                    <span class="fs-3 bi bi-javascript text-warning me-4"></span>
+                                    JavaScript
+                                </span>
+                                <div class="collapse js">
+                                    <ul class="ms-4 d-flex flex-column nav">
+                                        <li class="nav-item"><a href="#" class="nav-link">Item 1</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link">Item 2</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link">Item 3</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link">Item 4</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="nav-link" data-bs-toggle="collapse" data-bs-target=".css">
+                                    <span class="bi bi-chevron-right"></span>
+                                    <span class="fs-3 text-info bi bi-css me-4"></span>
+                                    CSS
+                                </span>
+                                <div class="collapse css">
+                                    <ul class="ms-4 d-flex flex-column nav">
+                                        <li class="nav-item"><a href="#" class="nav-link">Item 1</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link">Item 2</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link">Item 3</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link">Item 4</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="nav-link" data-bs-toggle="collapse" data-bs-target=".html">
+                                    <span class="bi bi-chevron-right"></span>
+                                    <span class="fs-3 text-danger bi bi-code-slash me-4"></span>
+                                    HTML
+                                </span>
+                                <div class="collapse html">
+                                    <ul class="ms-4 d-flex flex-column nav">
+                                        <li class="nav-item"><a href="#" class="nav-link">Item 1</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link">Item 2</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link">Item 3</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link">Item 4</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <span href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target=".java">
+                                    <span class="bi bi-chevron-right"></span>
+                                    <span class="fs-3 bg-java rounded bi bi-cup-hot-fill me-4"></span>
+                                    Java
+                                </span>
+                                <div class="collapse java">
+                                    <ul class="ms-4 d-flex flex-column nav">
+                                        <li class="nav-item"><a href="#" class="nav-link">Item 1</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link">Item 2</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link">Item 3</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link">Item 4</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <hr class="mx-3">
+                            </li>
+                            <li><a href="/Fla-Zone/sobre.html" class="nav-link text-nowrap"><span class="fs-3 bi bi-info-circle-fill me-4"></span>Sobre o autor</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <main class="p-md-5 p-3 col-md-8">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis odit rem nulla, possimus, sint obcaecati sunt illum, cum excepturi repellat maxime repudiandae beatae, odio nam provident libero sed et enim!
+                <div class="btn btn-info">Clique </div>
+                
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dolorum nulla reprehenderit, expedita laborum assumenda ut illo est magnam hic, non sapiente officiis quaerat cumque reiciendis. Ad maxime, tenetur tempora.
+                inicio</main>
+        </div>
+    </div>
+    
+</body>
+
+</html>
+
+<ul>
+    <li>itrm </li>
+    <li>itrm </li>
+    <li>itrm </li>g
+    <li>itrm </li>
+    <li><itrm /li>
+</ul>
+
+<a href=""></a>
