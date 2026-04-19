@@ -1,2 +1,2 @@
 # fla-zone
-dedicado a projectos simples e fácil com interação de frameworks font-end 
+Dedicado a projectos simples e fáceis com interação de frameworks font-end.
